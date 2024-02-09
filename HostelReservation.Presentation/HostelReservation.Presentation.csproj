@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HostelReservation.Application\HostelReservation.Application.csproj" />
+    <ProjectReference Include="..\HostelReservation.DbContext\HostelReservation.Context.csproj" />
+    <ProjectReference Include="..\HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
