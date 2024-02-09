@@ -10,7 +10,9 @@ namespace HostelReservation.Model
     public class Reservation
     {
  
-
+        /// <summary>
+        /// here everything is ok 
+        /// </summary>
         public int ReservationID { get; set; }
 
         public DateTime ReservationCheckIn { get; set; }
