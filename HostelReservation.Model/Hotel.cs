@@ -12,6 +12,6 @@ namespace HostelReservation.Model
         public string HotelName {  get; set; }
         public string HotelPhone {  get; set; }
         public int HotelZipCode {  get; set; }
-       // List <Room> Rooms {  get; set; }
+        List <Room> Rooms {  get; set; }
     }
 }
