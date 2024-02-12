@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_HostelReservation.Model", "HostelReservation.Model\1_HostelReservation.Model.csproj", "{730DD9C4-1B69-45BF-A9FB-8B3E0936C929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelReservation.Model", "HostelReservation.Model\HostelReservation.Model.csproj", "{730DD9C4-1B69-45BF-A9FB-8B3E0936C929}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_HostelReservation.Application", "HostelReservation.Application\2_HostelReservation.Application.csproj", "{795AC169-C310-41F4-8C5E-6BD73DBC29D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelReservation.Application", "HostelReservation.Application\HostelReservation.Application.csproj", "{795AC169-C310-41F4-8C5E-6BD73DBC29D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_HostelReservation.Infrastructure", "HostelReservation.Infrastructure\3_HostelReservation.Infrastructure.csproj", "{571E254A-733F-4EB2-8CBC-2F7FF0A346E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelReservation.Infrastructure", "HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj", "{571E254A-733F-4EB2-8CBC-2F7FF0A346E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4_HostelReservation.Context", "HostelReservation.DbContext\4_HostelReservation.Context.csproj", "{9852396C-DF98-490D-85B1-F7BA48234A57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelReservation.Context", "HostelReservation.DbContext\HostelReservation.Context.csproj", "{9852396C-DF98-490D-85B1-F7BA48234A57}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HostelReservation.Presentation", "HostelReservation.Presentation\HostelReservation.Presentation.csproj", "{EB242A69-6A3B-4239-B592-CE20D65EB3D9}"
 EndProject
