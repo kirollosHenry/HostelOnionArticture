@@ -17,8 +17,6 @@ namespace HostelReservation.Context.Configration
             builder.Property(c => c.Name).HasColumnType("varchar(50)").IsRequired();
             builder.Property(c => c.Phone).HasColumnType("intger").IsRequired();
             builder.Property(c => c.City).HasColumnType("varchar(50)").IsRequired();
-
-
         }
     
     }
