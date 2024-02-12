@@ -14,12 +14,10 @@ namespace HostelReservation.Context.Configration
     {
         public void Configure(EntityTypeBuilder<Room> builder)
         {
-            //builder.HasOne(r => r.Hotel)
-            //     .WithMany()
-            //     .HasForeignKey(r => r.HotelID)
-            //     .OnDelete(DeleteBehavior.Restrict);
-
-
+            builder.HasOne(r => r.hotel)
+                 .WithMany()
+                 .HasForeignKey(r => r.HotelID)
+                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

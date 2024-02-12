@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HostelReservation.Model\HostelReservation.Model.csproj" />
+    <ProjectReference Include="..\HostelReservation.Model\1_HostelReservation.Model.csproj" />
   </ItemGroup>
 
 </Project>
