@@ -16,6 +16,8 @@ namespace HostelReservation.Model
 
         public char RoomStatus { get; set; }
 
-        //public Hotel hotel { get; set; }
+        public int HotelID { get; set; }
+
+        public Hotel? hotel { get; set; }
     }
 }
