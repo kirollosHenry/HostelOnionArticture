@@ -12,6 +12,7 @@ namespace HostelReservation.Context
 {
     public class HostelDbContext : DbContext
     {
+        public DbSet<Room> Rooms { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Hotel> Hotel { get; set; }
         public DbSet<Customer> Customers { get; set; }
@@ -20,8 +21,6 @@ namespace HostelReservation.Context
         {
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=HostelDB;Integrated Security=True;Encrypt=false;Trust Server Certificate=True;");
             base.OnConfiguring(optionsBuilder);
-
-
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
