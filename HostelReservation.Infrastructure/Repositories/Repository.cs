@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HostelReservation.Application.Contracts;
 using HostelReservation.Context;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace HostelReservation.Infrastructure.Repositories
@@ -13,7 +14,11 @@ namespace HostelReservation.Infrastructure.Repositories
     public class Repository<T, TID> : IRepo<T, TID> where T : class
     {
         HostelDbContext? hostelDbContext { get; set; }
+        public Repository(HostelDbContext _hostelDbContext)
+        {
+            hostelDbContext = _hostelDbContext;    
 
+        }
         public List<T> GetAllEntity()
         {
             var QueryAllEntity = hostelDbContext!.Set<T>();
