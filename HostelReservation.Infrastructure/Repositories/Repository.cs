@@ -48,7 +48,7 @@ namespace HostelReservation.Infrastructure.Repositories
             return EntityToDelete!;
         }
 
-        public int save()
+        public int Save()
         {
             return hostelDbContext!.SaveChanges();
         }

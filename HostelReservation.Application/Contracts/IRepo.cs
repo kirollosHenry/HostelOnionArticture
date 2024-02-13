@@ -18,6 +18,6 @@ namespace HostelReservation.Application.Contracts
 
         T DeleteEntity(TID id);
 
-        public int save();
+        public int Save();
     }
 }
