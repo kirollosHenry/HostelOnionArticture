@@ -5,40 +5,52 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using HostelReservation.Application.Contracts;
+using HostelReservation.Context;
 
 
 namespace HostelReservation.Infrastructure.Repositories
 {
     public class Repository<T, TID> : IRepo<T, TID> where T : class
     {
+        HostelDbContext? hostelDbContext { get; set; }
+
         public List<T> GetAllEntity()
         {
-            throw new NotImplementedException();
+            var QueryAllEntity = hostelDbContext!.Set<T>();
+            return QueryAllEntity.ToList();
         }
 
         public T GetEntitybyId(TID id)
         {
-            throw new NotImplementedException();
+            var QueryIdEntity = hostelDbContext!.Set<T>().Find(id);
+            return QueryIdEntity!;
         }
 
         public T CreateEntity(T Entity)
         {
-            throw new NotImplementedException();
+            var QueryCreateEntity = hostelDbContext!.Set<T>().Add(Entity).Entity;
+            return QueryCreateEntity;
         }
 
         public T UpdateEntity(T Entity)
         {
-            throw new NotImplementedException();
+            return hostelDbContext!.Set<T>().Update(Entity).Entity;
         }
 
         public T DeleteEntity(TID id)
         {
-            throw new NotImplementedException();
+            var EntityToDelete = hostelDbContext!.Set<T>().Find(id);
+            if (EntityToDelete != null)
+            {
+                hostelDbContext.Set<T>().Remove(EntityToDelete);
+                hostelDbContext.SaveChanges();
+            }
+            return EntityToDelete!;
         }
 
         public int save()
         {
-            throw new NotImplementedException();
+            return hostelDbContext!.SaveChanges();
         }
     }
 }
