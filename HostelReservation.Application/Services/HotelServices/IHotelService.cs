@@ -18,5 +18,7 @@ namespace HostelReservation.Application.Services.HotelServices
         public Hotel UpdateHotel(Hotel hotel);
 
         public Hotel DeleteHotel(int hotelId);
+
+       
     }
 }
