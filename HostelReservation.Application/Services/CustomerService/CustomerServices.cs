@@ -10,12 +10,13 @@ namespace HostelReservation.Application.Services.CustomerService
 {
     internal class CustomerServices : ICustomerServices
     {
-        IRepo<Customer,int> _repo;
-        ICustomer cust;
-        public CustomerServices(IRepo<Customer,int> repo) 
+        ICustomer _repo;
+
+        public CustomerServices(ICustomer repo) 
         {
             _repo = repo;        
         }
+
         public Customer CreateCustomer(Customer customer)
         {
             var Crecustomer = _repo!.CreateEntity(customer);
@@ -46,7 +47,7 @@ namespace HostelReservation.Application.Services.CustomerService
 
         public Customer SerachByName(string name)
         {
-            var Scustomer=cust.SerachByName(name);
+            var Scustomer=_repo.SerachByName(name);
             return Scustomer;
         }
 

@@ -10,22 +10,24 @@ namespace HostelReservation.Model
     public class Reservation
     {
  
-        /// <summary>
-        /// here everything is ok 
-        /// </summary>
+       
         public int ReservationID { get; set; }
 
         public DateTime ReservationCheckIn { get; set; }
 
         public DateTime ReservationCheckOut { get; set; }
 
-        public int RoomID { get; set; }
+        public int  BillingId { get; set; }
+
+        public Billing Billing { get; set; }
+
+       // public List<int> RoomID { get; set; }
        
         public int CustomerID { get; set; }
         
-        public object C { get; set; }
+        public Customer Customer { get; set; }
 
-        public object Room { get; set; }
+        public   Room  Room { get; set; }
 
     }
 }
