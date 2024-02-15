@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HostelReservation.Model
 {
-    public class Billing
+    public class Billings
     {
         public int  BillingId { get; set; }
 
