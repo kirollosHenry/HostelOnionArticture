@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HostelReservation.Application.Contracts
+namespace HostelReservation.Applications.Contracts
 {
     public interface ICustomer : IRepo<Customer, int>
     {

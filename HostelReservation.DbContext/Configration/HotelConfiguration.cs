@@ -16,7 +16,7 @@ namespace HostelReservation.Context.Configration
             builder.HasKey(h => h.HotelID);
             builder.Property(h => h.HotelName).HasColumnType("varchar(50)").IsRequired();
             builder.Property(h => h.HotelPhone).HasColumnType("varchar(50)").IsRequired();
-            builder.Property(h => h.HotelZipCode).HasColumnType("intger").IsRequired();
+            builder.Property(h => h.HotelZipCode).HasColumnType("int").IsRequired();
         }
     }
 }

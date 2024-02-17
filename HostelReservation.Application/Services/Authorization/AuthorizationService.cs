@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HostelReservation.Application.Services.Authorization
+namespace HostelReservation.Applications.Services.Authorization
 {
     public class AuthorizationService : IAuthorizationService
     {

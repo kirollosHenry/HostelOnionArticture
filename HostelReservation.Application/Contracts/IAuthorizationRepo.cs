@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HostelReservation.Application.Contracts
+namespace HostelReservation.Applications.Contracts
 {
     public interface IAuthorizationRepo  : IRepo<Authorizations, int> 
     {

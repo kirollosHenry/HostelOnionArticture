@@ -13,5 +13,6 @@ namespace HostelReservation.Model
         public string Name { get; set; }
         public string? City { get; set; }
         public int Phone { get; set; }
+        public ICollection<Billings> Billings { get; set; }
     }
 }

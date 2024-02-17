@@ -1,4 +1,4 @@
-﻿using HostelReservation.Application.Contracts;
+﻿using HostelReservation.Applications.Contracts;
 
 using HostelReservation.Context;
 using HostelReservation.Model;

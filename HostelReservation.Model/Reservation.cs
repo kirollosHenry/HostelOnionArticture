@@ -19,15 +19,15 @@ namespace HostelReservation.Model
 
         public int  BillingId { get; set; }
 
-        public Billing Billing { get; set; }
+        public Billings? Billing { get; set; }
 
        // public List<int> RoomID { get; set; }
        
         public int CustomerID { get; set; }
         
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
-        public   Room  Room { get; set; }
+        public   Room?  Room { get; set; }
 
     }
 }

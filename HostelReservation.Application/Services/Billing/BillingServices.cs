@@ -1,4 +1,4 @@
-﻿using HostelReservation.Application.Contracts;
+﻿using HostelReservation.Applications.Contracts;
 using HostelReservation.Model;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HostelReservation.Application.Services.Billing
+namespace HostelReservation.Applications.Services.Billing
 {
     public class BillingServices : IBillingServices
     {

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HostelReservation.Application\HostelReservation.Application.csproj" />
+    <ProjectReference Include="..\HostelReservation.Application\HostelReservation.Applications.csproj" />
     <ProjectReference Include="..\HostelReservation.DbContext\HostelReservation.Context.csproj" />
   </ItemGroup>
 

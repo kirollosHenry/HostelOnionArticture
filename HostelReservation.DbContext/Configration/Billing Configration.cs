@@ -15,13 +15,14 @@ namespace HostelReservation.Context.Configration
         public void Configure(EntityTypeBuilder<Billings> builder)
         {
             builder.HasKey(b => b.BillingId);
-            builder.Property(b => b.Deposit).HasColumnType("double").IsRequired();
-            builder.Property(b => b.Price).HasColumnType("double").IsRequired();
+            builder.Property(b => b.Deposit).HasColumnType("decimal").IsRequired();
+            builder.Property(b => b.Price).HasColumnType("decimal").IsRequired();
             builder.Property(b => b.NumberOFDays).HasColumnType("int").IsRequired();
-            builder.HasOne(b => b.Cusromer)
-                 .WithMany()
-                 .HasForeignKey(r => r.CustomerId)
-                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(b => b.Customer)
+                .WithMany(c => c.Billings)  // Assuming you have a navigation property in Customer class representing the relationship
+                .HasForeignKey(b => b.CustomerId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

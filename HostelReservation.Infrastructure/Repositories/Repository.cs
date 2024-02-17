@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using HostelReservation.Application.Contracts;
+using HostelReservation.Applications.Contracts;
 using HostelReservation.Context;
 using Microsoft.EntityFrameworkCore;
 

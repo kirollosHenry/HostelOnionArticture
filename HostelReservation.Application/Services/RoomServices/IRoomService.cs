@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HostelReservation.Application.Services.RoomServices
+namespace HostelReservation.Applications.Services.RoomServices
 {
     public interface IRoomService
     {

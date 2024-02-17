@@ -22,6 +22,6 @@ namespace HostelReservation.Model
 
         public int resverationId { get; set; }
 
-        public Reservation reservation { get; set; }
+        //public Reservation reservation { get; set; }
     }
 }
