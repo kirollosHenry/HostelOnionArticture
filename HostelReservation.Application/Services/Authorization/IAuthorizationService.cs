@@ -19,7 +19,7 @@ namespace HostelReservation.Applications.Services.Authorization
 
         public Authorizations DeleteUser(int authorizationId);
 
-        public bool CheckIdentity(Authorizations authorization );
+        public Authorizations CheckIdentity(string UserName, string PassWord);
 
     }
 }

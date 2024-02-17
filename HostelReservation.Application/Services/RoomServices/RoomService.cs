@@ -39,9 +39,9 @@ namespace HostelReservation.Applications.Services.RoomServices
 
         public Room UpdateRoom(Room room)
         {
-            var QueryUpdateEoom = _IRepo!.UpdateEntity(room); 
+            var QueryUpdateRoom = _IRepo!.UpdateEntity(room); 
             _IRepo.Save();
-            return QueryUpdateEoom;
+            return QueryUpdateRoom;
         }
 
         public Room DeleteRoom(int roomId)
