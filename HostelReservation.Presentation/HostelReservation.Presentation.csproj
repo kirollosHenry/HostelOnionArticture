@@ -9,9 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HostelReservation.Application\HostelReservation.Applications.csproj" />
-    <ProjectReference Include="..\HostelReservation.DbContext\HostelReservation.Context.csproj" />
-    <ProjectReference Include="..\HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj" />
+    <PackageReference Include="Autofac" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.Application\HostelReservation.Applications.csproj" />
+    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.DbContext\HostelReservation.Context.csproj" />
+    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
