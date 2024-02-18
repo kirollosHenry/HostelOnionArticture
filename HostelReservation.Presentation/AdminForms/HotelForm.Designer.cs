@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             panelCRUD = new Panel();
-            label1 = new Label();
-            ViewButton = new Button();
-            AddButton = new Button();
-            UpdateButton = new Button();
             DeleteButton = new Button();
+            UpdateButton = new Button();
+            AddButton = new Button();
+            ViewButton = new Button();
+            label1 = new Label();
             panel1 = new Panel();
+            BackButton = new Button();
             panelCRUD.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,37 +50,17 @@
             panelCRUD.Size = new Size(1380, 94);
             panelCRUD.TabIndex = 0;
             // 
-            // label1
+            // DeleteButton
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(586, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(216, 71);
-            label1.TabIndex = 1;
-            label1.Text = "Hotel";
-            // 
-            // ViewButton
-            // 
-            ViewButton.BackColor = SystemColors.GradientInactiveCaption;
-            ViewButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ViewButton.Location = new Point(83, 3);
-            ViewButton.Name = "ViewButton";
-            ViewButton.Size = new Size(193, 88);
-            ViewButton.TabIndex = 2;
-            ViewButton.Text = "View";
-            ViewButton.UseVisualStyleBackColor = false;
-            // 
-            // AddButton
-            // 
-            AddButton.BackColor = SystemColors.GradientInactiveCaption;
-            AddButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddButton.Location = new Point(396, 3);
-            AddButton.Name = "AddButton";
-            AddButton.Size = new Size(193, 88);
-            AddButton.TabIndex = 3;
-            AddButton.Text = "Add";
-            AddButton.UseVisualStyleBackColor = false;
+            DeleteButton.BackColor = SystemColors.GradientInactiveCaption;
+            DeleteButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DeleteButton.Location = new Point(1110, 2);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(193, 88);
+            DeleteButton.TabIndex = 5;
+            DeleteButton.Text = "Delete";
+            DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // UpdateButton
             // 
@@ -91,17 +72,41 @@
             UpdateButton.TabIndex = 4;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
-            // DeleteButton
+            // AddButton
             // 
-            DeleteButton.BackColor = SystemColors.GradientInactiveCaption;
-            DeleteButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            DeleteButton.Location = new Point(1110, 2);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(193, 88);
-            DeleteButton.TabIndex = 5;
-            DeleteButton.Text = "Delete";
-            DeleteButton.UseVisualStyleBackColor = false;
+            AddButton.BackColor = SystemColors.GradientInactiveCaption;
+            AddButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            AddButton.Location = new Point(396, 3);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(193, 88);
+            AddButton.TabIndex = 3;
+            AddButton.Text = "Add";
+            AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += AddButton_Click;
+            // 
+            // ViewButton
+            // 
+            ViewButton.BackColor = SystemColors.GradientInactiveCaption;
+            ViewButton.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ViewButton.Location = new Point(83, 3);
+            ViewButton.Name = "ViewButton";
+            ViewButton.Size = new Size(193, 88);
+            ViewButton.TabIndex = 2;
+            ViewButton.Text = "View";
+            ViewButton.UseVisualStyleBackColor = false;
+            ViewButton.Click += ViewButton_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(589, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(216, 71);
+            label1.TabIndex = 1;
+            label1.Text = "Hotel";
             // 
             // panel1
             // 
@@ -110,12 +115,25 @@
             panel1.Size = new Size(1380, 476);
             panel1.TabIndex = 2;
             // 
+            // BackButton
+            // 
+            BackButton.BackColor = SystemColors.GradientInactiveCaption;
+            BackButton.Font = new Font("Wide Latin", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BackButton.Location = new Point(2, 0);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(147, 42);
+            BackButton.TabIndex = 8;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
+            // 
             // HotelForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1404, 666);
+            Controls.Add(BackButton);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(panelCRUD);
@@ -135,5 +153,6 @@
         private Button AddButton;
         private Button ViewButton;
         private Panel panel1;
+        private Button BackButton;
     }
 }

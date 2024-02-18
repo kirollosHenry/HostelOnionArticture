@@ -58,6 +58,7 @@
             HotelButton.TabIndex = 1;
             HotelButton.Text = "Hotel";
             HotelButton.UseVisualStyleBackColor = false;
+            HotelButton.Click += HotelButton_Click;
             // 
             // RoomButton
             // 
