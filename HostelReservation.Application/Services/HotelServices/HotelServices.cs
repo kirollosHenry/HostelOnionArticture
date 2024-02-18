@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace HostelReservation.Applications.Services.HotelServices
 {
-    internal class HotelServices : IHotelService
+    public class HotelServices : IHotelService
     {
         IRepo<Hotel, int>? _IRepo;
-        HotelServices(IRepo<Hotel, int> Irepo)
+         HotelServices(IRepo<Hotel, int> Irepo)
         {
             _IRepo = Irepo;
         }
