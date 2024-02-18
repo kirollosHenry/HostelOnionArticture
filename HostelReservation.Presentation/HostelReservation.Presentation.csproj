@@ -29,4 +29,12 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AdminReseption\" />
+    <Folder Include="UserControls_Admin\UC_Billing\" />
+    <Folder Include="UserControls_Admin\UC_Reservation\" />
+    <Folder Include="UserControls_Admin\UC_Customer\" />
+    <Folder Include="UserControls_Admin\UC_Room\" />
+  </ItemGroup>
+
 </Project>
