@@ -1,4 +1,5 @@
 ﻿using HostelReservation.Presentation.ResaptionForms;
+using HostelReservation.Presentation.AdminReseption;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,18 @@ namespace HostelReservation.Presentation
         {
             Resaption resaption = new Resaption();
             resaption.ShowDialog();
+        }
+
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CheckOutFrm ChOut = new CheckOutFrm();
+            ChOut.ShowDialog();
+        }
+
+        private void ReseptionForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

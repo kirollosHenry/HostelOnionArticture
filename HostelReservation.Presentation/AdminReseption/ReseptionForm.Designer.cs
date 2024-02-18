@@ -72,6 +72,7 @@
             CheckOutButton.TabIndex = 3;
             CheckOutButton.Text = "Checkout";
             CheckOutButton.UseVisualStyleBackColor = false;
+            CheckOutButton.Click += CheckOutButton_Click;
             // 
             // BackButton
             // 
@@ -163,6 +164,7 @@
             Controls.Add(label1);
             Name = "ReseptionForm";
             Text = "ReseptionForm";
+            Load += ReseptionForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
