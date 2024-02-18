@@ -17,6 +17,7 @@ namespace HostelReservation.Presentation.AdminForms
         {
             InitializeComponent();
         }
+
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
