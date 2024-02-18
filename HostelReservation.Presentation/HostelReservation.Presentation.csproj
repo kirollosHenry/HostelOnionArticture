@@ -9,13 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="8.0.0" />
+    <ProjectReference Include="..\HostelReservation.Application\HostelReservation.Applications.csproj" />
+    <ProjectReference Include="..\HostelReservation.DbContext\HostelReservation.Context.csproj" />
+    <ProjectReference Include="..\HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.Application\HostelReservation.Applications.csproj" />
-    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.DbContext\HostelReservation.Context.csproj" />
-    <ProjectReference Include="..\HostelOnionArticture\HostelReservation.Infrastructure\HostelReservation.Infrastructure.csproj" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AdminReseption\" />
   </ItemGroup>
 
 </Project>

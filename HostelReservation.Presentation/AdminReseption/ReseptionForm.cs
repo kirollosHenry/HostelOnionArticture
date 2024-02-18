@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HostelReservation.Presentation
 {
-    public partial class AdminForm : Form
+    public partial class ReseptionForm : Form
     {
-        public AdminForm()
+        public ReseptionForm()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace HostelReservation.Presentation
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form1_Login form1_Login = new Form1_Login();
+            LoginForm form1_Login = new LoginForm();
             form1_Login.ShowDialog();
         }
     }

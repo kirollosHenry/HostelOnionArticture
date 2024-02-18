@@ -63,9 +63,9 @@ namespace HostelReservation.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sddefault {
+        internal static System.Drawing.Bitmap Somapay {
             get {
-                object obj = ResourceManager.GetObject("sddefault", resourceCulture);
+                object obj = ResourceManager.GetObject("Somapay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,17 +1,17 @@
-using HostelReservation.Applications.Contracts;
+using System;
 using HostelReservation.Applications.Services.Authorization;
 using HostelReservation.Infrastructure.Repositories.AuthorizationRepoistory;
 
 namespace HostelReservation.Presentation
 {
-    public partial class Form1_Login : Form
+    public partial class LoginForm : Form
     {
-        public Form1_Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Login_button_Click(object sender, EventArgs e)
         {
             string UserName = textBox1.Text;
             string Password = textBox2.Text;
