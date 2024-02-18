@@ -52,5 +52,12 @@ namespace HostelReservation.Presentation
             ReservationForm reservationForm = new ReservationForm();
             reservationForm.ShowDialog();
         }
+
+        private void BillingButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            BillingForm billingForm = new BillingForm();
+            billingForm.ShowDialog();
+        }
     }
 }

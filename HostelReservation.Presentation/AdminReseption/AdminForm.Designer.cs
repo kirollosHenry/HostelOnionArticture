@@ -106,6 +106,7 @@
             BillingButton.TabIndex = 5;
             BillingButton.Text = "Billing";
             BillingButton.UseVisualStyleBackColor = false;
+            BillingButton.Click += BillingButton_Click;
             // 
             // BackButton
             // 

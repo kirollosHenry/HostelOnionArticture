@@ -31,7 +31,6 @@
 
   <ItemGroup>
     <Folder Include="AdminReseption\" />
-    <Folder Include="UserControls_Admin\UC_Billing\" />
   </ItemGroup>
 
 </Project>
