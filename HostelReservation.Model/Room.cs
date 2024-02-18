@@ -20,7 +20,7 @@ namespace HostelReservation.Model
 
         public Hotel? hotel { get; set; }
 
-        public int resverationId { get; set; }
+        //public int resverationId { get; set; }
 
         //public Reservation reservation { get; set; }
     }
