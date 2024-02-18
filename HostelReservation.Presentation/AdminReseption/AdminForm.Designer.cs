@@ -70,6 +70,7 @@
             RoomButton.TabIndex = 2;
             RoomButton.Text = "Room";
             RoomButton.UseVisualStyleBackColor = false;
+            RoomButton.Click += RoomButton_Click;
             // 
             // CustomerButton
             // 
@@ -81,6 +82,7 @@
             CustomerButton.TabIndex = 3;
             CustomerButton.Text = "Customer";
             CustomerButton.UseVisualStyleBackColor = false;
+            CustomerButton.Click += CustomerButton_Click;
             // 
             // ReservationButton
             // 

@@ -35,6 +35,7 @@
             UpdateButton = new Button();
             AddButton = new Button();
             ViewButton = new Button();
+            BackButton = new Button();
             panelCRUD.SuspendLayout();
             SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             DeleteButton.TabIndex = 5;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // UpdateButton
             // 
@@ -87,6 +89,7 @@
             UpdateButton.TabIndex = 4;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // AddButton
             // 
@@ -98,6 +101,7 @@
             AddButton.TabIndex = 3;
             AddButton.Text = "Add";
             AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += AddButton_Click;
             // 
             // ViewButton
             // 
@@ -109,6 +113,19 @@
             ViewButton.TabIndex = 2;
             ViewButton.Text = "View";
             ViewButton.UseVisualStyleBackColor = false;
+            ViewButton.Click += ViewButton_Click;
+            // 
+            // BackButton
+            // 
+            BackButton.BackColor = SystemColors.GradientInactiveCaption;
+            BackButton.Font = new Font("Wide Latin", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BackButton.Location = new Point(2, -1);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(147, 42);
+            BackButton.TabIndex = 10;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // CustomerForm
             // 
@@ -116,6 +133,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1404, 666);
+            Controls.Add(BackButton);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(panelCRUD);
@@ -135,5 +153,6 @@
         private Button UpdateButton;
         private Button AddButton;
         private Button ViewButton;
+        private Button BackButton;
     }
 }
