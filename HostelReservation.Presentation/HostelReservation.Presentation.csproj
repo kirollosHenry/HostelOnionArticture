@@ -29,9 +29,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AdminReseption\" />
-    <Folder Include="Reception\" />
-  </ItemGroup>
-
 </Project>

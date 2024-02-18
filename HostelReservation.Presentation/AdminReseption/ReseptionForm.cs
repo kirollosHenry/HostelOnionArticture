@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HostelReservation.Presentation.AdminReseption;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,18 @@ namespace HostelReservation.Presentation
             this.Visible = false;
             LoginForm form1_Login = new LoginForm();
             form1_Login.ShowDialog();
+        }
+
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CheckOutFrm ChOut = new CheckOutFrm();
+            ChOut.ShowDialog();
+        }
+
+        private void ReseptionForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
