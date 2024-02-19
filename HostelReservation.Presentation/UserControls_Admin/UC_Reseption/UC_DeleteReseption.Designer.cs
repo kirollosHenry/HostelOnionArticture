@@ -45,6 +45,7 @@
             DeleteButton.TabIndex = 13;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // ReseptionIDtextBox
             // 
