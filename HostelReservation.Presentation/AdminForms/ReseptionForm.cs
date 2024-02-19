@@ -1,4 +1,4 @@
-﻿using HostelReservation.Presentation.UserControls_Admin.UC_Reservation;
+﻿using HostelReservation.Presentation.UserControls_Admin.UC_Reseption;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace HostelReservation.Presentation.AdminForms
 {
-    public partial class ReservationForm : Form
+    public partial class ReseptionForm : Form
     {
-        public ReservationForm()
+        public ReseptionForm()
         {
             InitializeComponent();
         }
@@ -28,26 +28,26 @@ namespace HostelReservation.Presentation.AdminForms
 
         private void ViewButton_Click(object sender, EventArgs e)
         {
-            UC_ViewReservation uC_ViewReservation = new UC_ViewReservation();
-            addUserControl(uC_ViewReservation);
+            UC_ViewReseption uC_ViewReseption = new UC_ViewReseption();
+            addUserControl(uC_ViewReseption);
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            UC_AddReservation uC_AddReservation = new UC_AddReservation();
-            addUserControl(uC_AddReservation);
+            UC_AddReseption uC_AddReseption = new UC_AddReseption();
+            addUserControl(uC_AddReseption);
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            UC_UpdateReservation uC_UpdateReservation = new UC_UpdateReservation();
-            addUserControl(uC_UpdateReservation);
+            UC_UpdateReseption uC_UpdateReseption = new UC_UpdateReseption();
+            addUserControl(uC_UpdateReseption);
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            UC_DeleteReservation uC_DeleteReservation = new UC_DeleteReservation();
-            addUserControl(uC_DeleteReservation);
+            UC_DeleteReseption uC_DeleteReseption = new UC_DeleteReseption();
+            addUserControl(uC_DeleteReseption);
         }
 
         private void BackButton_Click(object sender, EventArgs e)

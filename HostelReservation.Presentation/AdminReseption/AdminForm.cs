@@ -42,8 +42,29 @@ namespace HostelReservation.Presentation
         private void CustomerButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            CustomerForm frm = new CustomerForm();
-            frm.ShowDialog();
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.ShowDialog();
+        }
+
+        private void ReservationButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ReservationForm reservationForm = new ReservationForm();
+            reservationForm.ShowDialog();
+        }
+
+        private void BillingButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            BillingForm billingForm = new BillingForm();
+            billingForm.ShowDialog();
+        }
+
+        private void ReseptionButton_Click(object sender, EventArgs e)
+        {
+            this.Visible=false;
+            HostelReservation.Presentation.AdminForms.ReseptionForm reseptionForm = new HostelReservation.Presentation.AdminForms.ReseptionForm();
+            reseptionForm.ShowDialog();
         }
 
         private void ReseptionButton_Click(object sender, EventArgs e)

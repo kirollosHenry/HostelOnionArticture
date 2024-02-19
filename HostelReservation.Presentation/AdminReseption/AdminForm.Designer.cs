@@ -94,6 +94,7 @@
             ReservationButton.TabIndex = 4;
             ReservationButton.Text = "Reservation";
             ReservationButton.UseVisualStyleBackColor = false;
+            ReservationButton.Click += ReservationButton_Click;
             // 
             // BillingButton
             // 
@@ -105,6 +106,7 @@
             BillingButton.TabIndex = 5;
             BillingButton.Text = "Billing";
             BillingButton.UseVisualStyleBackColor = false;
+            BillingButton.Click += BillingButton_Click;
             // 
             // BackButton
             // 

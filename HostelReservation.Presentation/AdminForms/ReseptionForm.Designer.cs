@@ -1,6 +1,6 @@
 ﻿namespace HostelReservation.Presentation.AdminForms
 {
-    partial class BillingForm
+    partial class ReseptionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BackButton = new Button();
             panel1 = new Panel();
             label1 = new Label();
             panelCRUD = new Panel();
@@ -35,26 +36,37 @@
             UpdateButton = new Button();
             AddButton = new Button();
             ViewButton = new Button();
-            BackButton = new Button();
             panelCRUD.SuspendLayout();
             SuspendLayout();
             // 
+            // BackButton
+            // 
+            BackButton.BackColor = SystemColors.GradientInactiveCaption;
+            BackButton.Font = new Font("Wide Latin", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BackButton.Location = new Point(1, 2);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new Size(147, 42);
+            BackButton.TabIndex = 19;
+            BackButton.Text = "Back";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
+            // 
             // panel1
             // 
-            panel1.Location = new Point(12, 181);
+            panel1.Location = new Point(12, 186);
             panel1.Name = "panel1";
             panel1.Size = new Size(1380, 476);
-            panel1.TabIndex = 14;
+            panel1.TabIndex = 18;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(570, 9);
+            label1.Location = new Point(523, 15);
             label1.Name = "label1";
-            label1.Size = new Size(259, 71);
-            label1.TabIndex = 13;
-            label1.Text = "billing";
+            label1.Size = new Size(352, 71);
+            label1.TabIndex = 17;
+            label1.Text = "Reseption";
             // 
             // panelCRUD
             // 
@@ -62,10 +74,10 @@
             panelCRUD.Controls.Add(UpdateButton);
             panelCRUD.Controls.Add(AddButton);
             panelCRUD.Controls.Add(ViewButton);
-            panelCRUD.Location = new Point(12, 84);
+            panelCRUD.Location = new Point(12, 86);
             panelCRUD.Name = "panelCRUD";
             panelCRUD.Size = new Size(1380, 94);
-            panelCRUD.TabIndex = 12;
+            panelCRUD.TabIndex = 16;
             // 
             // DeleteButton
             // 
@@ -115,19 +127,7 @@
             ViewButton.UseVisualStyleBackColor = false;
             ViewButton.Click += ViewButton_Click;
             // 
-            // BackButton
-            // 
-            BackButton.BackColor = SystemColors.GradientInactiveCaption;
-            BackButton.Font = new Font("Wide Latin", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BackButton.Location = new Point(0, 0);
-            BackButton.Name = "BackButton";
-            BackButton.Size = new Size(147, 42);
-            BackButton.TabIndex = 15;
-            BackButton.Text = "Back";
-            BackButton.UseVisualStyleBackColor = false;
-            BackButton.Click += BackButton_Click;
-            // 
-            // BillingForm
+            // ReseptionForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -137,8 +137,8 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(panelCRUD);
-            Name = "BillingForm";
-            Text = "BillingForm";
+            Name = "ReseptionForm";
+            Text = "ReseptionForm";
             panelCRUD.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -146,6 +146,7 @@
 
         #endregion
 
+        private Button BackButton;
         private Panel panel1;
         private Label label1;
         private Panel panelCRUD;
@@ -153,6 +154,5 @@
         private Button UpdateButton;
         private Button AddButton;
         private Button ViewButton;
-        private Button BackButton;
     }
 }
