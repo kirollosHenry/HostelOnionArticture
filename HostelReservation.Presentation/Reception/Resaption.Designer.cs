@@ -46,6 +46,7 @@
             label10 = new Label();
             dateTimePicker1 = new DateTimePicker();
             dateTimePicker2 = new DateTimePicker();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -185,9 +186,10 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Showcard Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.Location = new Point(839, 18);
             label10.Name = "label10";
-            label10.Size = new Size(58, 20);
+            label10.Size = new Size(90, 26);
             label10.TabIndex = 19;
             label10.Text = "label10";
             // 
@@ -204,12 +206,24 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(250, 27);
             dateTimePicker2.TabIndex = 21;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(1235, 211);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 22;
+            label3.Text = "label3";
+            label3.Visible = false;
             // 
             // Resaption
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1511, 478);
+            Controls.Add(label3);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
             Controls.Add(label10);
