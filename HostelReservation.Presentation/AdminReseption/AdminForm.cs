@@ -67,6 +67,11 @@ namespace HostelReservation.Presentation
             reseptionForm.ShowDialog();
         }
 
-        
+        private void ReseptionButton_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            HostelReservation.Presentation.AdminForms.ReseptionForm reseptionForm = new HostelReservation.Presentation.AdminForms.ReseptionForm();
+            reseptionForm.ShowDialog();
+        }
     }
 }
