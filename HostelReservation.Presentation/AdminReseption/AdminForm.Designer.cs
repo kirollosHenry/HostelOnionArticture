@@ -70,6 +70,7 @@
             RoomButton.TabIndex = 2;
             RoomButton.Text = "Room";
             RoomButton.UseVisualStyleBackColor = false;
+            RoomButton.Click += RoomButton_Click;
             // 
             // CustomerButton
             // 
@@ -81,6 +82,7 @@
             CustomerButton.TabIndex = 3;
             CustomerButton.Text = "Customer";
             CustomerButton.UseVisualStyleBackColor = false;
+            CustomerButton.Click += CustomerButton_Click;
             // 
             // ReservationButton
             // 
@@ -92,6 +94,7 @@
             ReservationButton.TabIndex = 4;
             ReservationButton.Text = "Reservation";
             ReservationButton.UseVisualStyleBackColor = false;
+            ReservationButton.Click += ReservationButton_Click;
             // 
             // BillingButton
             // 
@@ -103,6 +106,7 @@
             BillingButton.TabIndex = 5;
             BillingButton.Text = "Billing";
             BillingButton.UseVisualStyleBackColor = false;
+            BillingButton.Click += BillingButton_Click;
             // 
             // BackButton
             // 
@@ -126,6 +130,7 @@
             ReseptionButton.TabIndex = 8;
             ReseptionButton.Text = "Reseption";
             ReseptionButton.UseVisualStyleBackColor = false;
+            ReseptionButton.Click += ReseptionButton_Click;
             // 
             // AdminForm
             // 

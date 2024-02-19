@@ -10,9 +10,9 @@ namespace HostelReservation.Applications.Services.RoomServices
 {
     public class RoomService : IRoomService
     {
-        IRepo<Room, int>? _IRepo;
+        IRoom? _IRepo;
 
-        public RoomService(IRepo<Room,int> RoomRepo)
+        public RoomService(IRoom RoomRepo)
         {
             _IRepo = RoomRepo;
         }
@@ -53,6 +53,12 @@ namespace HostelReservation.Applications.Services.RoomServices
                 return QueryDeleteRoom;
             }
             return null!;
+        }
+
+        public List<Room> GetRoomsInHotel(int Hotelid)
+        {
+            var queryRoomHotel=_IRepo.GetAllRoomInHotel(Hotelid);
+            return queryRoomHotel;
         }
     }
 }

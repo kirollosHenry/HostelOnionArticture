@@ -137,12 +137,12 @@ namespace HostelReservation.Context.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ReservationCheckIn")
-                        .HasColumnType("integer");
+                        .HasColumnType("DateTime");
 
                     b.Property<DateTime>("ReservationCheckOut")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("RoomId")
+                    b.Property<int>("RoomID")
                         .HasColumnType("int");
 
                     b.HasKey("ReservationID");
@@ -151,7 +151,7 @@ namespace HostelReservation.Context.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.HasIndex("RoomId");
+                    b.HasIndex("RoomID");
 
                     b.ToTable("Reservations");
                 });
@@ -210,7 +210,9 @@ namespace HostelReservation.Context.Migrations
 
                     b.HasOne("HostelReservation.Model.Room", "Room")
                         .WithMany()
-                        .HasForeignKey("RoomId");
+                        .HasForeignKey("RoomID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Billing");
 

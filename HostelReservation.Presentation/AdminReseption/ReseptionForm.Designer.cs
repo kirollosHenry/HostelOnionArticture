@@ -60,6 +60,7 @@
             CheckInButton.TabIndex = 2;
             CheckInButton.Text = "Checkin";
             CheckInButton.UseVisualStyleBackColor = false;
+            CheckInButton.Click += CheckInButton_Click;
             // 
             // CheckOutButton
             // 

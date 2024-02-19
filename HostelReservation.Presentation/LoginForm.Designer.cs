@@ -97,6 +97,7 @@
             Controls.Add(label1);
             Name = "LoginForm";
             Text = "Login";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

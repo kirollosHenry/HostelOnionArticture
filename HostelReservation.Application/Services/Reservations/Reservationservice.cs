@@ -8,13 +8,13 @@ using HostelReservation.Model;
 
 namespace HostelReservation.Applications.Services.Reservations
 {
-    public class Reservationservice(IRepo<Reservation, int> repo)
+    public class Reservationservice :IReservationService                               /*(IRepo<Reservation, int> repo)*/
     {
         IRepo<Reservation, int> _IRepo;
-        //public Reservationservice(IRepo<Reservation,int> _repo)
-        //{
-        //    repo = _repo;
-        //}
+        public Reservationservice(IRepo<Reservation, int> _repo)
+        {
+            _IRepo = _repo;
+        }
         public Reservation CreateReservationl(Reservation reservation)
         {
             var CreatReservation = _IRepo.CreateEntity(reservation);

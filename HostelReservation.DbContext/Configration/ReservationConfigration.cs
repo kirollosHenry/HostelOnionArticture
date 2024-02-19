@@ -14,7 +14,7 @@ namespace HostelReservation.Context.Configration
         public void Configure(EntityTypeBuilder<Reservation> builder)
         {
             builder.HasKey(s => s.ReservationID);
-            builder.Property(c=>c.ReservationCheckIn).HasColumnType("integer").IsRequired();
+            builder.Property(c=>c.ReservationCheckIn).HasColumnType("DateTime").IsRequired();
 
            
         }
