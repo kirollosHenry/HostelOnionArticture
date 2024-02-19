@@ -72,6 +72,7 @@
             DeleteButton.TabIndex = 9;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // UC_DeleteHotel
             // 

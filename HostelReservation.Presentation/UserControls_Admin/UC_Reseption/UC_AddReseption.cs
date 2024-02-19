@@ -30,6 +30,7 @@ namespace HostelReservation.Presentation.UserControls_Admin.UC_Reseption
                 User.Password = PasstextBox.Text;
                 User.Role = "Reseption";
                 authorizationService.CreateUser(User);
+                MessageBox.Show("Successfully Added");
 
                 UsertextBox.Text = "";
                 PasstextBox.Text = "";
