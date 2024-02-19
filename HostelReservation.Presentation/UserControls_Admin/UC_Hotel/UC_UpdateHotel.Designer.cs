@@ -52,6 +52,7 @@
             UpdateButton.TabIndex = 5;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // UC_UpdateHotel
             // 

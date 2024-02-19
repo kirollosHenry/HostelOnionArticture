@@ -43,6 +43,7 @@
             UpdateButton.TabIndex = 15;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = false;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // dataGridView1
             // 
