@@ -19,7 +19,7 @@ namespace HostelReservation.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-VD76OGN\\SQLEXPRESS01;Initial Catalog=HostelDB;Integrated Security=True;Encrypt=false;Trust Server Certificate=True;");
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=HostelDB;Integrated Security=True;Encrypt=false;Trust Server Certificate=True;");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

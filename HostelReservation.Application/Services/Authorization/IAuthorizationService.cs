@@ -21,5 +21,7 @@ namespace HostelReservation.Applications.Services.Authorization
 
         public Authorizations CheckIdentity(string UserName, string PassWord);
 
+        public List<Authorizations> GetReseptions();
+
     }
 }

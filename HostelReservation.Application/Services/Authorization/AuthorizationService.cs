@@ -17,6 +17,11 @@ namespace HostelReservation.Applications.Services.Authorization
             _IRepo = AuthorizationRepo;
         }
 
+        public List<Authorizations> GetReseptions()
+        {
+            var QueryReseptions = _IRepo.GetReseptions().ToList();
+            return QueryReseptions;
+        }
         public Authorizations CheckIdentity(string UserName, string PassWord)
         {
             var CheckUser = _IRepo.CheckIdentity(UserName, PassWord);

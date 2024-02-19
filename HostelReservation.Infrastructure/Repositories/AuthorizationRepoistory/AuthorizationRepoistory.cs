@@ -26,5 +26,13 @@ namespace HostelReservation.Infrastructure.Repositories.AuthorizationRepoistory
             }
             return User!;
         }
+
+        public List<Authorizations> GetReseptions()
+        {
+            string Role = "Reseption";
+            var reseption = _HostelDbContext.Set<Authorizations>().Where(a => a.Role == Role).ToList();
+            return reseption;
+        }
+
     }
 }

@@ -130,7 +130,7 @@
             ReseptionButton.TabIndex = 8;
             ReseptionButton.Text = "Reseption";
             ReseptionButton.UseVisualStyleBackColor = false;
-            ReseptionButton.Click += ReseptionButton_Click;
+            ReseptionButton.Click += ReseptionButton_Click_1;
             // 
             // AdminForm
             // 

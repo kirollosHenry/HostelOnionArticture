@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HostelReservation.Applications.Services.Authorization;
+using HostelReservation.Infrastructure.Repositories.AuthorizationRepoistory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,23 @@ namespace HostelReservation.Presentation.UserControls_Admin.UC_Reseption
 {
     public partial class UC_ViewReseption : UserControl
     {
+        AuthorizationService authorizationService = new AuthorizationService(new AuthorizationRepoistory(new Context.HostelDbContext()));
+
         public UC_ViewReseption()
         {
             InitializeComponent();
+            dataGridView1.DataSource = authorizationService.GetReseptions().ToList();
+            //dataGridView1.Columns.Add("", "Id");
+            //dataGridView1.Columns.Add("", "USerName");
+            //dataGridView1.Columns.Add("", "Role");
+            //dataGridView1.Columns.Add("", "Password");
+            dataGridView1.Columns[0].Width = 320;
+            dataGridView1.Columns[1].Width = 320;
+            dataGridView1.Columns[2].Width = 320;
+            dataGridView1.Columns[3].Width = 320;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
         }
     }
 }

@@ -62,14 +62,15 @@ namespace HostelReservation.Presentation
 
         private void ReseptionButton_Click(object sender, EventArgs e)
         {
-            this.Visible=false;
+            this.Visible = false;
             HostelReservation.Presentation.AdminForms.ReseptionForm reseptionForm = new HostelReservation.Presentation.AdminForms.ReseptionForm();
             reseptionForm.ShowDialog();
         }
 
-        private void ReseptionButton_Click(object sender, EventArgs e)
+        private void ReseptionButton_Click_1(object sender, EventArgs e)
         {
-            
+
         }
+
     }
 }

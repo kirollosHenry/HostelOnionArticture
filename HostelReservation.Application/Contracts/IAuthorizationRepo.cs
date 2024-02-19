@@ -10,5 +10,7 @@ namespace HostelReservation.Applications.Contracts
     public interface IAuthorizationRepo  : IRepo<Authorizations, int> 
     {
         public Authorizations CheckIdentity(string UserName, string PassWord);
+
+        public List<Authorizations> GetReseptions();
     }
 }
