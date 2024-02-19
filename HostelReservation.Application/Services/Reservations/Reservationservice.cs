@@ -10,8 +10,8 @@ namespace HostelReservation.Applications.Services.Reservations
 {
     public class Reservationservice :IReservationService                               /*(IRepo<Reservation, int> repo)*/
     {
-        IRepo<Reservation, int> _IRepo;
-        public Reservationservice(IRepo<Reservation, int> _repo)
+        IReservationRepo _IRepo;
+        public Reservationservice(IReservationRepo _repo)
         {
             _IRepo = _repo;
         }
@@ -37,6 +37,12 @@ namespace HostelReservation.Applications.Services.Reservations
         {
             var ShowReservation = _IRepo.GetAllEntity().ToList();
             return ShowReservation;
+        }
+
+        public Reservation GetCustomerReservationById(int id)
+        {
+            var query= _IRepo.GetCustomerReservationById(id);
+            return query;
         }
 
         public Reservation GetReservationID(int Id)

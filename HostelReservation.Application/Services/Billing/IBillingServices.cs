@@ -20,5 +20,7 @@ namespace HostelReservation.Applications.Services.Billing
         public Billings DeleteBilling(int billingId);
 
         Billings SerachByName(string name);
+
+        public Billings SerachCustomerById(int id);
     }
 }

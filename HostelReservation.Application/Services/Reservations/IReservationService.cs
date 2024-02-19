@@ -23,6 +23,8 @@ namespace HostelReservation.Applications.Services.Reservations
         
 
         public Reservation UpdateReservation(Reservation reservation);
+
+        public Reservation GetCustomerReservationById(int id);
         
     }
 }

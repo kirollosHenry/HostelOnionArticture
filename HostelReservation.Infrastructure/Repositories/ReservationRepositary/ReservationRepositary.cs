@@ -1,4 +1,5 @@
-﻿using HostelReservation.Context;
+﻿using HostelReservation.Applications.Contracts;
+using HostelReservation.Context;
 using HostelReservation.Model;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HostelReservation.Infrastructure.Repositories.ReservationRepositary
 {
-    public  class ReservationRepositary:Repository<Reservation, int>
+    public  class ReservationRepositary:Repository<Reservation, int> ,IReservationRepo
     {
         
        HostelDbContext _HostelDbContext;
@@ -17,6 +18,10 @@ namespace HostelReservation.Infrastructure.Repositories.ReservationRepositary
            _HostelDbContext = hostelDbContext;
        }
 
-        
+        public Reservation GetCustomerReservationById(int id)
+        {
+            var Query = _HostelDbContext.Reservations.FirstOrDefault(s => s.CustomerID == id);
+            return Query;
+        }
     }
 }

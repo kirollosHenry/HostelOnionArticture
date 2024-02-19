@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace HostelReservation.Applications.Contracts
 {
-    public interface ICustomer : IRepo<Customer, int>
+    public  interface IReservationRepo : IRepo<Reservation, int>
     {
-        IQueryable<Customer> SerachByName(string name);
+         public Reservation GetCustomerReservationById(int id);
     }
 }

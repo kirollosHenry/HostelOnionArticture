@@ -45,6 +45,12 @@ namespace HostelReservation.Applications.Services.Billing
             return bill;
         }
 
+        public Billings SerachCustomerById(int id)
+        {
+            var query = _billrepo.SerachCusromerBillindById(id);
+            return query;
+        }
+
         public Billings UpdateBilling(Billings billing)
         {
             var billupdate= _billrepo.UpdateEntity(billing);

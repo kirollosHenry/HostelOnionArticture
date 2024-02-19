@@ -53,7 +53,7 @@ namespace HostelReservation.Presentation.ResaptionForms
             DataGridView dgv = (DataGridView)sender;
             DataGridViewRow selectedRow = dgv.SelectedRows[0];
             int hotelid = int.Parse(selectedRow.Cells["HotelID"].Value.ToString()!);
-            dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
+          //  dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
             Hotelid = hotelid;
         }
         private void DataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace HostelReservation.Presentation.ResaptionForms
             {
                 DataGridViewRow selectedRow = dgv.SelectedRows[0];
                 int hotelid = int.Parse(selectedRow.Cells["HotelID"].Value.ToString()!);
-                dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
+               // dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
             }
         }
 

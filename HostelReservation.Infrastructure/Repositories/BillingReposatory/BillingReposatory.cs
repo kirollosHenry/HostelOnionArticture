@@ -17,7 +17,11 @@ namespace HostelReservation.Infrastructure.Repositories.BillingReposatory
         this.HostelDbContext = HostelDbContext;
     }
 
-   
+        public Billings SerachCusromerBillindById(int id)
+        {
+            var bill= HostelDbContext.Set<Billings>().FirstOrDefault(s=>s.CustomerId == id);
+            return bill;
+        }
 
         Billings IBilling.SerachByName(string name)
         {

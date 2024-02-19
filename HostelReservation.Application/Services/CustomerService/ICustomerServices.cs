@@ -19,6 +19,6 @@ namespace HostelReservation.Applications.Services.CustomerService
 
         public Customer DeleteCustomer(int customerId);
 
-        Customer SerachByName(string name);
+        IQueryable<Customer> SerachByName(string name);
     }
 }

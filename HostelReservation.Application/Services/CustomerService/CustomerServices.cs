@@ -45,7 +45,7 @@ namespace HostelReservation.Applications.Services.CustomerService
             return Scustomer;
         }
 
-        public Customer SerachByName(string name)
+        public IQueryable<Customer> SerachByName(string name)
         {
             var Scustomer=_repo.SerachByName(name);
             return Scustomer;

@@ -18,9 +18,10 @@ namespace HostelReservation.Infrastructure.Repositories.CustomerRepository
             this.HostelDbContext = HostelDbContext;
         }
         
-        public Customer SerachByName(string name)
+        public IQueryable<Customer> SerachByName(string name)
         {
-            var customer = HostelDbContext.Set<Customer>().Find(name);
+            var customer = HostelDbContext.Set<Customer>().Where(p => p.Name.Contains(name));
+                
             if (customer == null)
             {
                 Console.WriteLine("Not Found");
