@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HostelReservation.Applications.Services.CustomerService
 {
-    internal class CustomerServices : ICustomerServices
+    public class CustomerServices : ICustomerServices
     {
         ICustomer _repo;
 

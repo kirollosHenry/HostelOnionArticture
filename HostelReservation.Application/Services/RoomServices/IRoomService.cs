@@ -18,5 +18,7 @@ namespace HostelReservation.Applications.Services.RoomServices
         public Room UpdateRoom (Room room);
 
         public Room DeleteRoom (int roomId);
+        
+        public List<Room> GetRoomsInHotel(int Hotelid);
     }
 }

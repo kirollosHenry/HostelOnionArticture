@@ -4,6 +4,7 @@ using HostelReservation.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HostelReservation.Context.Migrations
 {
     [DbContext(typeof(HostelDbContext))]
-    partial class HostelDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240219151513_inital2")]
+    partial class inital2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,7 +145,7 @@ namespace HostelReservation.Context.Migrations
                     b.Property<DateTime>("ReservationCheckOut")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("RoomID")
+                    b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
                     b.HasKey("ReservationID");
@@ -151,7 +154,7 @@ namespace HostelReservation.Context.Migrations
 
                     b.HasIndex("CustomerID");
 
-                    b.HasIndex("RoomID");
+                    b.HasIndex("RoomId");
 
                     b.ToTable("Reservations");
                 });
@@ -210,9 +213,7 @@ namespace HostelReservation.Context.Migrations
 
                     b.HasOne("HostelReservation.Model.Room", "Room")
                         .WithMany()
-                        .HasForeignKey("RoomID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RoomId");
 
                     b.Navigation("Billing");
 

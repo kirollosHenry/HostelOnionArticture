@@ -38,5 +38,10 @@ namespace HostelReservation.Presentation
                 MessageBox.Show("Invalid Username or Password");
             }
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace HostelReservation.Model
 
         public Billings? Billing { get; set; }
 
-       // public List<int> RoomID { get; set; }
+        public int RoomID { get; set; }
        
         public int CustomerID { get; set; }
         

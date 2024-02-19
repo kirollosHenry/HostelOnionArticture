@@ -11,7 +11,7 @@ namespace HostelReservation.Applications.Services.HotelServices
     public class HotelServices : IHotelService
     {
         IRepo<Hotel, int>? _IRepo;
-         HotelServices(IRepo<Hotel, int> Irepo)
+        public HotelServices(IRepo<Hotel, int> Irepo)
         {
             _IRepo = Irepo;
         }
