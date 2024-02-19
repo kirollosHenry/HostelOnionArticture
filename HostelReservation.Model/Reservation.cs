@@ -9,8 +9,6 @@ namespace HostelReservation.Model
 {
     public class Reservation
     {
- 
-       
         public int ReservationID { get; set; }
 
         public DateTime ReservationCheckIn { get; set; }
@@ -28,6 +26,5 @@ namespace HostelReservation.Model
         public Customer? Customer { get; set; }
 
         public   Room?  Room { get; set; }
-
     }
 }

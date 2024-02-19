@@ -35,6 +35,7 @@
             radioButton2 = new RadioButton();
             searchtxt = new TextBox();
             SearchBtn = new Button();
+            ReturnBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -62,10 +63,10 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 303);
+            dataGridView1.Location = new Point(12, 303);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1300, 345);
+            dataGridView1.Size = new Size(1380, 351);
             dataGridView1.TabIndex = 22;
             // 
             // radioButton1
@@ -107,13 +108,25 @@
             // 
             SearchBtn.BackColor = SystemColors.GradientInactiveCaption;
             SearchBtn.Font = new Font("Modern No. 20", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SearchBtn.Location = new Point(540, 202);
+            SearchBtn.Location = new Point(524, 202);
             SearchBtn.Name = "SearchBtn";
-            SearchBtn.Size = new Size(146, 46);
+            SearchBtn.Size = new Size(162, 46);
             SearchBtn.TabIndex = 20;
             SearchBtn.Text = "Search";
             SearchBtn.UseVisualStyleBackColor = false;
             SearchBtn.Click += SearchBtn_Click;
+            // 
+            // ReturnBtn
+            // 
+            ReturnBtn.BackColor = SystemColors.GradientInactiveCaption;
+            ReturnBtn.Font = new Font("Modern No. 20", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ReturnBtn.Location = new Point(1230, 202);
+            ReturnBtn.Name = "ReturnBtn";
+            ReturnBtn.Size = new Size(162, 46);
+            ReturnBtn.TabIndex = 25;
+            ReturnBtn.Text = "Return";
+            ReturnBtn.UseVisualStyleBackColor = false;
+            ReturnBtn.Click += this.ReturnBtn_Click;
             // 
             // CheckOutFrm
             // 
@@ -121,6 +134,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1404, 666);
+            Controls.Add(ReturnBtn);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(dataGridView1);
@@ -129,7 +143,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "CheckOutFrm";
-            Text = "CheckOutFrm";
+            Text = "Check Out";
             Load += CheckOutFrm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -144,5 +158,6 @@
         private RadioButton radioButton2;
         private TextBox searchtxt;
         private Button SearchBtn;
+        private Button ReturnBtn;
     }
 }

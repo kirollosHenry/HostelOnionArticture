@@ -45,7 +45,7 @@ namespace HostelReservation.Presentation.ResaptionForms
             dataGridView1.DataSource = hotel.GetAllHotel();
             //  List<Hotel> list = hotel.GetAllHotel();
             //dataGridView1.DataSource = list;
-            label10.Visible=false;
+            label10.Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,26 +77,26 @@ namespace HostelReservation.Presentation.ResaptionForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            Customer c1= new Customer();
-            c1.Name=textBox2.Text;
-            c1.City=textBox3.Text;
-            c1.Phone=int.Parse(textBox4.Text);
-            c1=customer.CreateCustomer(c1);
+
+            Customer c1 = new Customer();
+            c1.Name = textBox2.Text;
+            c1.City = textBox3.Text;
+            c1.Phone = int.Parse(textBox4.Text);
+            c1 = customer.CreateCustomer(c1);
             Reservation reservation = new Reservation();
             reservation.CustomerID = c1.ID;
-            reservation.ReservationCheckIn= DateTime.Parse( dateTimePicker1.Value.Date.ToString());
-            reservation.ReservationCheckOut= DateTime.Parse(dateTimePicker2.Value.Date.ToString());
-            reservation.RoomID= Roomid;
+            reservation.ReservationCheckIn = DateTime.Parse(dateTimePicker1.Value.Date.ToString());
+            reservation.ReservationCheckOut = DateTime.Parse(dateTimePicker2.Value.Date.ToString());
+            reservation.RoomID = Roomid;
             Billings billings = new Billings();
-            billings.CustomerId= c1.ID;
+            billings.CustomerId = c1.ID;
             billings.NumberOFDays = (int)(reservation.ReservationCheckOut - reservation.ReservationCheckIn).TotalDays;
-            billings.Price = money*billings.NumberOFDays;
+            billings.Price = money * billings.NumberOFDays;
             billings.Deposit = billings.Price - decimal.Parse(textBox7.Text);
-            billings= bill.CreateBilling(billings);
-           reservation.BillingId= billings.BillingId;
-            reservation=reserve.CreateReservationl(reservation);
-            if(reservation!=null && billings != null)
+            billings = bill.CreateBilling(billings);
+            reservation.BillingId = billings.BillingId;
+            reservation = reserve.CreateReservationl(reservation);
+            if (reservation != null && billings != null)
             {
                 label10.Visible = true;
                 label10.ForeColor = Color.Green;
@@ -106,6 +106,14 @@ namespace HostelReservation.Presentation.ResaptionForms
             label10.Visible = true;
             label10.ForeColor = Color.Red;
             label10.Text = "RESERVATION NOT DONE";
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            decimal total = (int)(dateTimePicker2.Value.Date - dateTimePicker1.Value.Date).TotalDays * money;
+            label3.Visible= true;
+            label3.ForeColor = Color.Blue;
+            label3.Text = "Total price is "+ total.ToString();
         }
     }
 }
