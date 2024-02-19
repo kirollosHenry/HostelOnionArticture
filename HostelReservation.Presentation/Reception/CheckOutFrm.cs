@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HostelReservation.Applications.Services.HotelServices;
+using HostelReservation.Context;
+using HostelReservation.Infrastructure.Repositories.HotelRepository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +20,36 @@ namespace HostelReservation.Presentation.AdminReseption
             InitializeComponent();
         }
 
-        private void SearchBtn_Click(object sender, EventArgs e)
+        private void SearchBtn_Click(object sender , EventArgs e)
         {
             if (radioButton1.Checked)
             {
-                // search using name
+                // function (get data using name (name) searchtxt.text)
+                HotelServices hotelService = new HotelServices(new HotelRepository(new HostelDbContext()));
+
+                dataGridView1.DataSource = hotelService.GetAllHotel();
+                dataGridView1.Columns[1].Visible = true;
+                dataGridView1.Columns[2].Visible = false;
+                dataGridView1.Columns[3].Visible = false;
             }
+            if (radioButton2.Checked)
+            {
+                // function (get data using id  (id) serchtxt.text)
+                HotelServices hotelService = new HotelServices(new HotelRepository(new HostelDbContext()));
+
+                dataGridView1.DataSource = hotelService.GetAllHotel();
+                dataGridView1.Columns[1].Visible = false;
+                dataGridView1.Columns[2].Visible = true;
+                dataGridView1.Columns[3].Visible = true;
+            }
+
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+          this.Hide();
+          ReseptionForm reseptionForm = new ReseptionForm();
+          reseptionForm.ShowDialog();
         }
 
         private void CheckOutFrm_Load(object sender, EventArgs e)
