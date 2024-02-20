@@ -54,6 +54,7 @@
             DeleteButton.TabIndex = 15;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = false;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // ReservationIdtextBox
             // 
