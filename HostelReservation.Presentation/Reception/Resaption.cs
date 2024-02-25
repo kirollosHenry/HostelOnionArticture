@@ -37,15 +37,24 @@ namespace HostelReservation.Presentation.ResaptionForms
         public Resaption()
         {
             InitializeComponent();
-            //     dataGridView1.DataSource = hotel.GetAllHotel();
+            //dataGridView1.DataSource = hotel.GetAllHotel();
         }
 
         private void Resaption_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = hotel.GetAllHotel();
+
+            dataGridView1.Columns[0].Width = 156;
+            dataGridView1.Columns[1].Width = 156;
+            dataGridView1.Columns[2].Width = 156;
+            dataGridView1.Columns[3].Width = 156;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+
             //  List<Hotel> list = hotel.GetAllHotel();
             //dataGridView1.DataSource = list;
-            label10.Visible = false;
+            //label10.Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -53,19 +62,30 @@ namespace HostelReservation.Presentation.ResaptionForms
             DataGridView dgv = (DataGridView)sender;
             DataGridViewRow selectedRow = dgv.SelectedRows[0];
             int hotelid = int.Parse(selectedRow.Cells["HotelID"].Value.ToString()!);
-          //  dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
+            dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
             Hotelid = hotelid;
+
+            dataGridView2.Columns[0].Width = 125;
+            dataGridView2.Columns[1].Width = 125;
+            dataGridView2.Columns[2].Width = 125;
+            dataGridView2.Columns[3].Width = 125;
+            dataGridView2.Columns[4].Width = 125;
+            dataGridView2.Columns[5].Width = 125;
+            dataGridView2.RowHeadersVisible = false;
+            dataGridView2.DefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+            dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+
         }
-        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = dgv.SelectedRows[0];
-                int hotelid = int.Parse(selectedRow.Cells["HotelID"].Value.ToString()!);
-               // dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
-            }
-        }
+        //private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    DataGridView dgv = (DataGridView)sender;
+        //    if (dgv.SelectedRows.Count > 0)
+        //    {
+        //        DataGridViewRow selectedRow = dgv.SelectedRows[0];
+        //        int hotelid = int.Parse(selectedRow.Cells["HotelID"].Value.ToString()!);
+        //        dataGridView2.DataSource = room.GetRoomsInHotel(hotelid);
+        //    }
+        //}
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,22 +118,31 @@ namespace HostelReservation.Presentation.ResaptionForms
             reservation = reserve.CreateReservationl(reservation);
             if (reservation != null && billings != null)
             {
-                label10.Visible = true;
-                label10.ForeColor = Color.Green;
-                label10.Text = "RESERVATION DONE";
+                MessageBox.Show("Successfully SUBMIT");
+
+                this.Visible = false;
+                ReseptionForm resaptionForms = new ReseptionForm();
+                resaptionForms.ShowDialog();
                 return;
             }
-            label10.Visible = true;
-            label10.ForeColor = Color.Red;
-            label10.Text = "RESERVATION NOT DONE";
+
+            MessageBox.Show("Falid SUBMIT");
+
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             decimal total = (int)(dateTimePicker2.Value.Date - dateTimePicker1.Value.Date).TotalDays * money;
-            label3.Visible= true;
-            label3.ForeColor = Color.Blue;
-            label3.Text = "Total price is "+ total.ToString();
+            label3.Visible = true;
+            label3.ForeColor = Color.Red;
+            label3.Text = "Total Price is : " + total.ToString();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ReseptionForm resaptionForms = new ReseptionForm();
+            resaptionForms.ShowDialog();
         }
     }
 }

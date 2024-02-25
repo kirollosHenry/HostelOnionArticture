@@ -76,6 +76,18 @@ namespace HostelReservation.Presentation.AdminReseption
 
                     dataGridView1.DataSource = customerList;
 
+                    dataGridView1.Columns[0].Width = 172;
+                    dataGridView1.Columns[1].Width = 172;
+                    dataGridView1.Columns[2].Width = 172;
+                    dataGridView1.Columns[3].Width = 172;
+                    dataGridView1.Columns[4].Width = 172;
+                    dataGridView1.Columns[5].Width = 172;
+                    dataGridView1.Columns[6].Width = 172;
+                    dataGridView1.Columns[7].Width = 172;
+                    dataGridView1.RowHeadersVisible = false;
+                    dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+                    dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+
                 }
             }
             if (radioButton2.Checked)
@@ -101,6 +113,18 @@ namespace HostelReservation.Presentation.AdminReseption
 
                     var customerList = new List<CustomerDto> { cc };
                     dataGridView1.DataSource = customerList;
+
+                    dataGridView1.Columns[0].Width = 172;
+                    dataGridView1.Columns[1].Width = 172;
+                    dataGridView1.Columns[2].Width = 172;
+                    dataGridView1.Columns[3].Width = 172;
+                    dataGridView1.Columns[4].Width = 172;
+                    dataGridView1.Columns[5].Width = 172;
+                    dataGridView1.Columns[6].Width = 172;
+                    dataGridView1.Columns[7].Width = 172;
+                    dataGridView1.RowHeadersVisible = false;
+                    dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
+                    dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 10, FontStyle.Regular);
                 }
                 else
                 {

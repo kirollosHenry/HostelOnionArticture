@@ -134,6 +134,7 @@
             SearchIDButton.TabIndex = 13;
             SearchIDButton.Text = "Search";
             SearchIDButton.UseVisualStyleBackColor = false;
+            SearchIDButton.Click += SearchIDButton_Click;
             // 
             // SearchNamebutton
             // 

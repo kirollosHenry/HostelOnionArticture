@@ -28,6 +28,7 @@ namespace HostelReservation.Presentation
 
         private void CheckInButton_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Resaption resaption = new Resaption();
             resaption.ShowDialog();
         }
@@ -40,6 +41,11 @@ namespace HostelReservation.Presentation
         }
 
         private void ReseptionForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchIDButton_Click(object sender, EventArgs e)
         {
 
         }
